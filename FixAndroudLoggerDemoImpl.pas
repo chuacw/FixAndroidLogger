@@ -15,13 +15,13 @@ type
     Panel2: TPanel;
     btnChangeTag: TButton;
     edTagName: TEdit;
-    GroupBox1: TGroupBox;
+    Panel3: TPanel;
     edPriorityTag: TEdit;
     btnSendToPriorityLog: TButton;
     rbInfo: TRadioButton;
     rbVerbose: TRadioButton;
-    rbDebug: TRadioButton;
     rbError: TRadioButton;
+    rbDebug: TRadioButton;
     procedure btnSendToLogClick(Sender: TObject);
     procedure btnChangeTagClick(Sender: TObject);
     procedure btnSendToPriorityLogClick(Sender: TObject);
@@ -39,6 +39,7 @@ uses
   FMX.Platform, FMX.Platform.Logger.Android.Fix;
 
 {$R *.fmx}
+{$R *.LgXhdpiPh.fmx ANDROID}
 
 procedure TfrmLogDemo.btnChangeTagClick(Sender: TObject);
 var

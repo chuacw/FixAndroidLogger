@@ -3,13 +3,13 @@ program FixAndroidLogger;
 uses
   System.StartUpCopy,
   FMX.Forms,
-  FixAndroudLoggerDemoImpl in 'FixAndroudLoggerDemoImpl.pas' {Form4},
-  FMX.Platform.Logger.Android.Fix in '..\..\FMXFixes\FMX.Platform.Logger.Android.Fix.pas';
+  FixAndroudLoggerDemoImpl in 'FixAndroudLoggerDemoImpl.pas' {frmLogDemo},
+  FMX.Platform.Logger.Android.Fix in 'FMX.Platform.Logger.Android.Fix.pas';
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(TForm4, Form4);
+  Application.CreateForm(TfrmLogDemo, frmLogDemo);
   Application.Run;
 end.

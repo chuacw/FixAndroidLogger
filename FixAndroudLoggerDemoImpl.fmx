@@ -13,7 +13,7 @@ object frmLogDemo: TfrmLogDemo
     Size.Width = 640.000000000000000000
     Size.Height = 97.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 1
+    TabOrder = 2
     object btnSendToLog: TButton
       Position.X = 8.000000000000000000
       Position.Y = 40.000000000000000000
@@ -54,25 +54,24 @@ object frmLogDemo: TfrmLogDemo
       Size.PlatformDefault = False
     end
   end
-  object GroupBox1: TGroupBox
+  object Panel3: TPanel
     Align = Top
     Position.Y = 194.000000000000000000
     Size.Width = 640.000000000000000000
-    Size.Height = 100.000000000000000000
+    Size.Height = 97.000000000000000000
     Size.PlatformDefault = False
-    Text = 'Priority Tags'
-    TabOrder = 2
+    TabOrder = 1
     object edPriorityTag: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 1
-      Position.Y = 23.000000000000000000
+      Align = Top
+      TabOrder = 4
       Size.Width = 640.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
     end
     object btnSendToPriorityLog: TButton
       Position.X = 8.000000000000000000
-      Position.Y = 50.000000000000000000
+      Position.Y = 34.000000000000000000
       TabOrder = 0
       Text = 'Send To Log'
       OnClick = btnSendToPriorityLogClick
@@ -80,31 +79,31 @@ object frmLogDemo: TfrmLogDemo
     object rbInfo: TRadioButton
       GroupName = 'Priority'
       Position.X = 104.000000000000000000
-      Position.Y = 48.000000000000000000
-      TabOrder = 5
+      Position.Y = 32.000000000000000000
+      TabOrder = 7
       Text = 'Info'
     end
     object rbVerbose: TRadioButton
       GroupName = 'Priority'
       Position.X = 104.000000000000000000
-      Position.Y = 64.000000000000000000
-      TabOrder = 4
-      Text = 'Verbose'
-    end
-    object rbDebug: TRadioButton
-      GroupName = 'Priority'
-      Position.X = 208.000000000000000000
       Position.Y = 48.000000000000000000
-      TabOrder = 3
-      Text = 'Debug'
+      TabOrder = 6
+      Text = 'Verbose'
     end
     object rbError: TRadioButton
       GroupName = 'Priority'
       IsChecked = True
       Position.X = 208.000000000000000000
-      Position.Y = 64.000000000000000000
+      Position.Y = 48.000000000000000000
       TabOrder = 2
       Text = 'Error'
+    end
+    object rbDebug: TRadioButton
+      GroupName = 'Priority'
+      Position.X = 208.000000000000000000
+      Position.Y = 32.000000000000000000
+      TabOrder = 3
+      Text = 'Debug'
     end
   end
 end
