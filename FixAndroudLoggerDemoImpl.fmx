@@ -1,0 +1,57 @@
+object frmLogDemo: TfrmLogDemo
+  Left = 0
+  Top = 0
+  Caption = 'Form4'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Panel1: TPanel
+    Align = Top
+    Size.Width = 640.000000000000000000
+    Size.Height = 97.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object btnSendToLog: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 40.000000000000000000
+      TabOrder = 0
+      Text = 'Send To Log'
+      OnClick = btnSendToLogClick
+    end
+    object edLog: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 1
+      Size.Width = 640.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object Panel2: TPanel
+    Align = Top
+    Position.Y = 97.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 97.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object btnChangeTag: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 40.000000000000000000
+      TabOrder = 1
+      Text = 'Change Tag'
+      OnClick = btnChangeTagClick
+    end
+    object edTagName: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 2
+      Text = 'chuacw'
+      Size.Width = 640.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+end
