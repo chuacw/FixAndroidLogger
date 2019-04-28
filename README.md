@@ -4,5 +4,5 @@ This app shows how using the FMX.Platform.Logger.Android.Fix, you can change the
 
 See the code for how to use it.
 
-![FMX app](../images/ChangeTag.png)
-![Console](../images/console.png)
+![FMX app](../master/images/ChangeTag.png)
+![Console](../master/images/console.png)
