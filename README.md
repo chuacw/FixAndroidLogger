@@ -4,6 +4,25 @@ This app shows how using the FMX.Platform.Logger.Android.Fix unit, you can chang
 
 In order to use it, all you have to do is include the FMX.Platform.Logger.Android.Fix unit in your project file.
 
+# Quick steps to use it
+- Include or add FMX.Platform.Logger.Android.Fix in your project file.
+- Include FMX.Platform.Logger.Android.Fix in the uses clause.
+- Include the following code in when logging:
+  
+```Delphi
+var LLogService: IFMXLoggingService;
+var LLogPriority: IFMXTagPriority;
+if TPlatformServices.Current.SupportsPlatformService(IFMXLoggingService, LLogService) and
+    Supports(LLogService, IFMXTagPriority, LLogPriority) then 
+    begin
+      LLogPriority.i('TagName', 'LogMessage');
+    end;
+```
+
+adb logcat -s TagName:*
+
+# Demo
+
 See the code in ![FixAndroudLoggerDemoImpl.pas](../master/FixAndroudLoggerDemoImpl.pas) for how to use it.
 
 ![FMX app](../master/images/ChangeTag2.png)

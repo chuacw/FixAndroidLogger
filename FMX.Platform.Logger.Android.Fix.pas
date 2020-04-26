@@ -8,6 +8,7 @@ uses
   FMX.Platform;
 
 type
+  /// <summary>Provides the ability to change the default tag used when logging</summary>
   IFMXChangeTag = interface
     ['{2D2FE594-3F82-4A6D-8C51-60918C76C1B8}']
     procedure ChangeTag(const ANewTag: string);
@@ -15,15 +16,24 @@ type
     property Tag: string read GetTag write ChangeTag;
   end;
 
+  /// <summary>Provides the ability to log messages with specific tags</summary>
   IFMXTagPriority = interface
     ['{6CC65368-A359-4DE4-B987-5D433D093110}']
+    /// <summary>Log a debug message</summary>
     procedure d(const Msg: string); overload;
+    /// <summary>Log a debug message with a tag</summary>
     procedure d(const Tag, Msg: string); overload;
+    /// <summary>Log an error message</summary>
     procedure e(const Msg: string); overload;
+    /// <summary>Log an error message with a tag</summary>
     procedure e(const Tag, Msg: string); overload;
+    /// <summary>Log an info message</summary>
     procedure i(const Msg: string); overload;
+    /// <summary>Log an info message with a tag</summary>
     procedure i(const Tag, Msg: string); overload;
+    /// <summary>Log a verbose message</summary>
     procedure v(const Msg: string); overload;
+    /// <summary>Log a verbose message with a tag</summary>
     procedure v(const Tag, Msg: string); overload;
   end;
 
@@ -278,9 +288,12 @@ begin
 end;
 
 class function Log.GetLogPriority: IFMXTagPriority;
+var
+  LLogger: IInterface;
 begin
-  if (Logger <> nil) and (FLogPriority = nil) then
-    Supports(Logger, IFMXTagPriority, FLogPriority);
+  LLogger := Logger;
+  if (LLogger <> nil) and (FLogPriority = nil) then
+    Supports(LLogger, IFMXTagPriority, FLogPriority);
   Result := FLogPriority;
 end;
 
@@ -507,6 +520,6 @@ finalization
   if GReplacementLogger <> nil then
     begin
       GReplacementLogger.Clear;
-      GReplacementLogger := nil;
+      GReplacementLogger.DisposeOf;
     end;
 end.

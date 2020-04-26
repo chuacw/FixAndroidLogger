@@ -36,15 +36,14 @@ var
 
 implementation
 uses
-  FMX.Platform, FMX.Platform.Logger.Android.Fix;
+  FMX.Platform, FMX.Platform.Logger.Android.Fix; //, FMX.Platform.Logger.Android.Fix;
 
 {$R *.fmx}
 {$R *.LgXhdpiPh.fmx ANDROID}
 
 procedure TfrmLogDemo.btnChangeTagClick(Sender: TObject);
-var
-  LChangeTagService: IFMXChangeTag;
 begin
+  var LChangeTagService: IFMXChangeTag;
   if TPlatformServices.Current.SupportsPlatformService(IFMXChangeTag,
     LChangeTagService) then
     begin
@@ -64,10 +63,9 @@ begin
 end;
 
 procedure TfrmLogDemo.btnSendToPriorityLogClick(Sender: TObject);
-var
-  LLogService: IFMXLoggingService;
-  LLogPriority: IFMXTagPriority;
 begin
+  var LLogService: IFMXLoggingService;
+  var LLogPriority: IFMXTagPriority;
   if TPlatformServices.Current.SupportsPlatformService(IFMXLoggingService,
     LLogService) then
     begin
