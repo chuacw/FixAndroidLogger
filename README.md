@@ -30,7 +30,7 @@ See the code in ![FixAndroudLoggerDemoImpl.pas](../master/FixAndroudLoggerDemoIm
 
 Once you have clicked on the Change Tag button, all your logs will be tagged with that name.
 
-![Demo](../master/AndroidLogViewer.gif)
+![Demo](../master/images/AndroidLogViewer.gif)
 
 You can also have priority tags as well, so your tags can have debug, error, info or verbose priority.
 

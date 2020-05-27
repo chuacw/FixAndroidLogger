@@ -8,7 +8,7 @@ uses
   FMX.Platform;
 
 type
-  /// <summary>Provides the ability to change the default tag used when logging</summary>
+  /// <summary>Provides the ability to change the default tag used when logging.</summary>
   IFMXChangeTag = interface
     ['{2D2FE594-3F82-4A6D-8C51-60918C76C1B8}']
     procedure ChangeTag(const ANewTag: string);
@@ -19,21 +19,25 @@ type
   /// <summary>Provides the ability to log messages with specific tags</summary>
   IFMXTagPriority = interface
     ['{6CC65368-A359-4DE4-B987-5D433D093110}']
-    /// <summary>Log a debug message</summary>
+
+    /// <summary>Log a debug message.</summary>
     procedure d(const Msg: string); overload;
-    /// <summary>Log a debug message with a tag</summary>
+    /// <summary>Log a debug message with a tag.</summary>
     procedure d(const Tag, Msg: string); overload;
-    /// <summary>Log an error message</summary>
+
+    /// <summary>Log an error message.</summary>
     procedure e(const Msg: string); overload;
-    /// <summary>Log an error message with a tag</summary>
+    /// <summary>Log an error message with a tag.</summary>
     procedure e(const Tag, Msg: string); overload;
-    /// <summary>Log an info message</summary>
+
+    /// <summary>Log an info message.</summary>
     procedure i(const Msg: string); overload;
-    /// <summary>Log an info message with a tag</summary>
+    /// <summary>Log an info message with a tag.</summary>
     procedure i(const Tag, Msg: string); overload;
-    /// <summary>Log a verbose message</summary>
+
+    /// <summary>Log a verbose message.</summary>
     procedure v(const Msg: string); overload;
-    /// <summary>Log a verbose message with a tag</summary>
+    /// <summary>Log a verbose message with a tag.</summary>
     procedure v(const Tag, Msg: string); overload;
   end;
 
@@ -81,12 +85,22 @@ type
   public
     /// <summary>Log a simple debug message.</summary>
     class procedure d(const Msg: string); overload;
+    /// <summary>Log a debug message with a tag.</summary>
     class procedure d(const Tag, Msg: string); overload;
+
+    /// <summary>Log a simple error message.</summary>
     class procedure e(const Msg: string); overload;
+    /// <summary>Log an error message with a tag.</summary>
     class procedure e(const Tag, Msg: string); overload;
+
+    /// <summary>Log a simple info message.</summary>
     class procedure i(const Msg: string); overload;
+    /// <summary>Log an info message with a tag.</summary>
     class procedure i(const Tag, Msg: string); overload;
+
+    /// <summary>Log a verbose message.</summary>
     class procedure v(const Msg: string); overload;
+    /// <summary>Log an verbose message with a tag.</summary>
     class procedure v(const Tag, Msg: string); overload;
   end;
 
@@ -108,14 +122,17 @@ type
     class procedure d(const Msg: string); overload; static;
     /// <summary>Log a debug message with a tag.</summary>
     class procedure d(const Tag, Msg: string); overload; static;
+
     /// <summary>Log a simple error message.</summary>
     class procedure e(const Msg: string); overload; static;
     /// <summary>Log an error message with a tag.</summary>
     class procedure e(const Tag, Msg: string); overload; static;
+
     /// <summary>Log a simple info message.</summary>
     class procedure i(const Msg: string); overload; static;
     /// <summary>Log an info message with a tag.</summary>
     class procedure i(const Tag, Msg: string); overload; static;
+
     /// <summary>Log a verbose message.</summary>
     class procedure v(const Msg: string); overload; static;
     /// <summary>Log an verbose message with a tag.</summary>
