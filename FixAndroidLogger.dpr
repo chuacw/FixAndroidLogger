@@ -13,3 +13,4 @@ begin
   Application.CreateForm(TfrmLogDemo, frmLogDemo);
   Application.Run;
 end.
+adb devices
