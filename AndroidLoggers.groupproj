@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{7D2B1AF8-D79B-4306-BE30-BE1CF3A251F5}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="FixAndroidLogger.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AndroidLoggerApp.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FixAndroidLogger">
+        <MSBuild Projects="FixAndroidLogger.dproj"/>
+    </Target>
+    <Target Name="FixAndroidLogger:Clean">
+        <MSBuild Projects="FixAndroidLogger.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FixAndroidLogger:Make">
+        <MSBuild Projects="FixAndroidLogger.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AndroidLoggerApp">
+        <MSBuild Projects="AndroidLoggerApp.dproj"/>
+    </Target>
+    <Target Name="AndroidLoggerApp:Clean">
+        <MSBuild Projects="AndroidLoggerApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AndroidLoggerApp:Make">
+        <MSBuild Projects="AndroidLoggerApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FixAndroidLogger;AndroidLoggerApp"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FixAndroidLogger:Clean;AndroidLoggerApp:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FixAndroidLogger:Make;AndroidLoggerApp:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

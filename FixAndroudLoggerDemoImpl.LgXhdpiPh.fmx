@@ -6,52 +6,56 @@ inherited frmLogDemo_LgXhdpiPh: TfrmLogDemo_LgXhdpiPh
     Size.Width = 450.000000000000000000
     inherited btnSendToLog: TButton
       Size.Width = 145.000000000000000000
-      Size.Height = 44.000000000000000000
-      Size.PlatformDefault = False
     end
-    inherited edLog: TEdit
+    inherited Panel4: TPanel
       Size.Width = 450.000000000000000000
-      Size.Height = 32.000000000000000000
+      inherited edLog: TEdit
+        Size.Width = 450.000000000000000000
+        Size.Height = 54.000000000000000000
+      end
+      inherited Label1: TLabel
+        Size.Width = 450.000000000000000000
+      end
     end
   end
   inherited Panel2: TPanel
     Size.Width = 450.000000000000000000
-    inherited btnChangeTag: TButton
-      Size.Width = 113.000000000000000000
-      Size.Height = 44.000000000000000000
-      Size.PlatformDefault = False
-    end
     inherited edTagName: TEdit
       Size.Width = 450.000000000000000000
-      Size.Height = 32.000000000000000000
+    end
+    inherited Label2: TLabel
+      Size.Width = 450.000000000000000000
     end
   end
   inherited Panel3: TPanel
     Size.Width = 450.000000000000000000
-    inherited edPriorityTag: TEdit
+    inherited Panel5: TPanel
       Size.Width = 450.000000000000000000
-      Size.Height = 32.000000000000000000
-    end
-    inherited btnSendToPriorityLog: TButton
-      Size.Width = 113.000000000000000000
-      Size.Height = 44.000000000000000000
-      Size.PlatformDefault = False
-    end
-    inherited rbInfo: TRadioButton
-      Position.X = 128.000000000000000000
-      Position.Y = 34.000000000000000000
-    end
-    inherited rbVerbose: TRadioButton
-      Position.X = 128.000000000000000000
-      Position.Y = 58.000000000000000000
-    end
-    inherited rbError: TRadioButton
-      Position.X = 232.000000000000000000
-      Position.Y = 58.000000000000000000
-    end
-    inherited rbDebug: TRadioButton
-      Position.X = 232.000000000000000000
-      Position.Y = 34.000000000000000000
+      inherited Label3: TLabel
+        Size.Width = 450.000000000000000000
+      end
+      inherited edPriorityTag: TEdit
+        Size.Width = 450.000000000000000000
+      end
+      inherited Panel6: TPanel
+        Size.Width = 450.000000000000000000
+        inherited rbDebug: TRadioButton
+          Position.X = 232.000000000000000000
+          Position.Y = 34.000000000000000000
+        end
+        inherited rbError: TRadioButton
+          Position.X = 232.000000000000000000
+          Position.Y = 58.000000000000000000
+        end
+        inherited rbVerbose: TRadioButton
+          Position.X = 128.000000000000000000
+          Position.Y = 58.000000000000000000
+        end
+        inherited rbInfo: TRadioButton
+          Position.X = 128.000000000000000000
+          Position.Y = 34.000000000000000000
+        end
+      end
     end
   end
 end

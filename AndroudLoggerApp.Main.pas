@@ -1,4 +1,4 @@
-unit FixAndroudLoggerDemoImpl;
+unit AndroudLoggerApp.Main;
 
 interface
 
@@ -29,8 +29,6 @@ type
     rbVerbose: TRadioButton;
     rbInfo: TRadioButton;
     procedure btnSendToLogClick(Sender: TObject);
-    procedure btnChangeTagClick(Sender: TObject);
-    procedure btnSendToPriorityLogClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
@@ -45,20 +43,9 @@ var
 
 implementation
 uses
-  FMX.Platform, FMX.Platform.Logger.Android.Fix;
+  FMX.Platform;
 
 {$R *.fmx}
-
-procedure TfrmLogDemo.btnChangeTagClick(Sender: TObject);
-var
-  LChangeTagService: IFMXChangeTag;
-begin
-  if TPlatformServices.Current.SupportsPlatformService(IFMXChangeTag,
-    LChangeTagService) then
-    begin
-      LChangeTagService.Tag := edTagName.Text;
-    end;
-end;
 
 procedure TfrmLogDemo.btnSendToLogClick(Sender: TObject);
 var
@@ -68,29 +55,6 @@ begin
     LLogService) then
     begin
       LLogService.Log(edLog.Text, []);
-    end;
-end;
-
-procedure TfrmLogDemo.btnSendToPriorityLogClick(Sender: TObject);
-var
-  LLogService: IFMXLoggingService;
-  LLogPriority: IFMXTagPriority;
-begin
-  if TPlatformServices.Current.SupportsPlatformService(IFMXLoggingService,
-    LLogService) then
-    begin
-      LLogPriority := LLogService as IFMXTagPriority;
-
-// use the default tags established
-
-      if rbDebug.IsChecked then
-        LLogPriority.d(edPriorityTag.Text) else
-      if rbError.IsChecked then
-        LLogPriority.e(edPriorityTag.Text) else
-      if rbInfo.IsChecked then
-        LLogPriority.i(edPriorityTag.Text) else
-      if rbVerbose.IsChecked then
-        LLogPriority.v(edPriorityTag.Text);
     end;
 end;
 

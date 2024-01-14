@@ -11,18 +11,9 @@
     <ItemGroup Condition="'$(Platform)'=='Linux64'"/>
     <ItemGroup Condition="'$(Platform)'=='Win32'"/>
     <ItemGroup Condition="'$(Platform)'=='Android64'">
-        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_72x72.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-hdpi\</RemoteDir>
-            <RemoteName>ic_launcher.png</RemoteName>
-            <DeployClass>Android_LauncherIcon72</DeployClass>
-            <Operation>1</Operation>
-            <LocalCommand/>
-            <RemoteCommand/>
-            <Overwrite>True</Overwrite>
-        </DeployFile>
-        <DeployFile Include="Android64\Debug\libFixAndroidLogger.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\library\lib\arm64-v8a\</RemoteDir>
-            <RemoteName>libFixAndroidLogger.so</RemoteName>
+        <DeployFile Include="Android64\Debug\libAndroidLoggerApp.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>AndroidLoggerApp\library\lib\arm64-v8a\</RemoteDir>
+            <RemoteName>libAndroidLoggerApp.so</RemoteName>
             <DeployClass>ProjectOutput</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
@@ -30,17 +21,17 @@
             <Overwrite>True</Overwrite>
             <Required>True</Required>
         </DeployFile>
-        <DeployFile Include="Android64\Debug\FixAndroidLogger.classes" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\classes\</RemoteDir>
-            <RemoteName>FixAndroidLogger.classes</RemoteName>
-            <DeployClass>AndroidClasses</DeployClass>
-            <Operation>64</Operation>
+        <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_72x72.png" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>AndroidLoggerApp\res\drawable-hdpi\</RemoteDir>
+            <RemoteName>ic_launcher.png</RemoteName>
+            <DeployClass>Android_LauncherIcon72</DeployClass>
+            <Operation>1</Operation>
             <LocalCommand/>
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android64\Debug\AndroidManifest.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\</RemoteDir>
             <RemoteName>AndroidManifest.xml</RemoteName>
             <DeployClass>ProjectAndroidManifest</DeployClass>
             <Operation>1</Operation>
@@ -49,7 +40,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_144x144.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-xxhdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon144</DeployClass>
             <Operation>1</Operation>
@@ -58,7 +49,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_192x192.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-xxxhdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon192</DeployClass>
             <Operation>1</Operation>
@@ -67,7 +58,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_48x48.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-mdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-mdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon48</DeployClass>
             <Operation>1</Operation>
@@ -76,7 +67,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_48x48.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-xhdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-xhdpi\</RemoteDir>
             <RemoteName>ic_notification.png</RemoteName>
             <DeployClass>Android_NotificationIcon48</DeployClass>
             <Operation>1</Operation>
@@ -85,7 +76,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_640x480.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-large\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-large\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage640</DeployClass>
             <Operation>1</Operation>
@@ -94,7 +85,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\debug\armeabi\libnative-activity.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\library\lib\armeabi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\library\lib\armeabi\</RemoteDir>
             <RemoteName>libFixAndroidLogger.so</RemoteName>
             <DeployClass>AndroidLibnativeArmeabiFile</DeployClass>
             <Operation>1</Operation>
@@ -103,7 +94,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android64\Debug\colors.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\values\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\values\</RemoteDir>
             <RemoteName>colors.xml</RemoteName>
             <DeployClass>Android_Colors</DeployClass>
             <Operation>1</Operation>
@@ -112,7 +103,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_36x36.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-hdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-hdpi\</RemoteDir>
             <RemoteName>ic_notification.png</RemoteName>
             <DeployClass>Android_NotificationIcon36</DeployClass>
             <Operation>1</Operation>
@@ -121,7 +112,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_96x96.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-xxxhdpi\</RemoteDir>
             <RemoteName>ic_notification.png</RemoteName>
             <DeployClass>Android_NotificationIcon96</DeployClass>
             <Operation>1</Operation>
@@ -130,7 +121,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android64\Debug\splash_image_def.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable\</RemoteDir>
             <RemoteName>splash_image_def.xml</RemoteName>
             <DeployClass>AndroidSplashImageDef</DeployClass>
             <Operation>1</Operation>
@@ -139,7 +130,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\debug\mips\libnative-activity.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\library\lib\mips\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\library\lib\mips\</RemoteDir>
             <RemoteName>libFixAndroidLogger.so</RemoteName>
             <DeployClass>AndroidLibnativeMipsFile</DeployClass>
             <Operation>1</Operation>
@@ -148,7 +139,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_96x96.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-xhdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-xhdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon96</DeployClass>
             <Operation>1</Operation>
@@ -157,7 +148,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\debug\armeabi-v7a\libnative-activity.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\library\lib\armeabi-v7a\</RemoteDir>
             <RemoteName>libFixAndroidLogger.so</RemoteName>
             <DeployClass>AndroidLibnativeArmeabiv7aFile</DeployClass>
             <Operation>1</Operation>
@@ -166,7 +157,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_24x24.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-mdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-mdpi\</RemoteDir>
             <RemoteName>ic_notification.png</RemoteName>
             <DeployClass>Android_NotificationIcon24</DeployClass>
             <Operation>1</Operation>
@@ -175,7 +166,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_36x36.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-ldpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-ldpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon36</DeployClass>
             <Operation>1</Operation>
@@ -184,7 +175,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_960x720.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-xlarge\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-xlarge\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage960</DeployClass>
             <Operation>1</Operation>
@@ -193,7 +184,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_426x320.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-small\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-small\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage426</DeployClass>
             <Operation>1</Operation>
@@ -202,7 +193,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android64\Debug\styles.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\values\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\values\</RemoteDir>
             <RemoteName>styles.xml</RemoteName>
             <DeployClass>AndroidSplashStyles</DeployClass>
             <Operation>1</Operation>
@@ -211,7 +202,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android64\Debug\strings.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\values\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\values\</RemoteDir>
             <RemoteName>strings.xml</RemoteName>
             <DeployClass>Android_Strings</DeployClass>
             <Operation>1</Operation>
@@ -219,8 +210,17 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
+        <DeployFile Include="Android64\Debug\AndroidLoggerApp.classes" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>AndroidLoggerApp\classes\</RemoteDir>
+            <RemoteName>AndroidLoggerApp.classes</RemoteName>
+            <DeployClass>AndroidClasses</DeployClass>
+            <Operation>64</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
         <DeployFile Include="Android64\Debug\styles-v21.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\values-v21\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\values-v21\</RemoteDir>
             <RemoteName>styles.xml</RemoteName>
             <DeployClass>AndroidSplashStylesV21</DeployClass>
             <Operation>1</Operation>
@@ -229,7 +229,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_72x72.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-xxhdpi\</RemoteDir>
             <RemoteName>ic_notification.png</RemoteName>
             <DeployClass>Android_NotificationIcon72</DeployClass>
             <Operation>1</Operation>
@@ -238,7 +238,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_470x320.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-normal\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-normal\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage470</DeployClass>
             <Operation>1</Operation>
@@ -249,7 +249,7 @@
     </ItemGroup>
     <ItemGroup Condition="'$(Platform)'=='Android'">
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_640x480.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-large\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-large\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage640</DeployClass>
             <Operation>1</Operation>
@@ -258,7 +258,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android\Debug\strings.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\values\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\values\</RemoteDir>
             <RemoteName>strings.xml</RemoteName>
             <DeployClass>Android_Strings</DeployClass>
             <Operation>1</Operation>
@@ -267,7 +267,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android\Debug\colors.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\values\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\values\</RemoteDir>
             <RemoteName>colors.xml</RemoteName>
             <DeployClass>Android_Colors</DeployClass>
             <Operation>1</Operation>
@@ -276,7 +276,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android\Debug\splash_image_def.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable\</RemoteDir>
             <RemoteName>splash_image_def.xml</RemoteName>
             <DeployClass>AndroidSplashImageDef</DeployClass>
             <Operation>1</Operation>
@@ -285,7 +285,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_72x72.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-hdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-hdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon72</DeployClass>
             <Operation>1</Operation>
@@ -294,7 +294,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_470x320.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-normal\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-normal\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage470</DeployClass>
             <Operation>1</Operation>
@@ -303,7 +303,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_72x72.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-xxhdpi\</RemoteDir>
             <RemoteName>ic_notification.png</RemoteName>
             <DeployClass>Android_NotificationIcon72</DeployClass>
             <Operation>1</Operation>
@@ -312,7 +312,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_144x144.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-xxhdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-xxhdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon144</DeployClass>
             <Operation>1</Operation>
@@ -321,7 +321,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_192x192.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-xxxhdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon192</DeployClass>
             <Operation>1</Operation>
@@ -330,7 +330,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_48x48.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-mdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-mdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon48</DeployClass>
             <Operation>1</Operation>
@@ -338,9 +338,9 @@
             <RemoteCommand/>
             <Overwrite>True</Overwrite>
         </DeployFile>
-        <DeployFile Include="Android\Debug\libFixAndroidLogger.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\library\lib\armeabi-v7a\</RemoteDir>
-            <RemoteName>libFixAndroidLogger.so</RemoteName>
+        <DeployFile Include="Android\Debug\libAndroidLoggerApp.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>AndroidLoggerApp\library\lib\armeabi-v7a\</RemoteDir>
+            <RemoteName>libAndroidLoggerApp.so</RemoteName>
             <DeployClass>ProjectOutput</DeployClass>
             <Operation>1</Operation>
             <LocalCommand/>
@@ -349,7 +349,7 @@
             <Required>True</Required>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_96x96.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-xhdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-xhdpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon96</DeployClass>
             <Operation>1</Operation>
@@ -358,7 +358,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_960x720.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-xlarge\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-xlarge\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage960</DeployClass>
             <Operation>1</Operation>
@@ -367,7 +367,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android\Debug\AndroidManifest.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\</RemoteDir>
             <RemoteName>AndroidManifest.xml</RemoteName>
             <DeployClass>ProjectAndroidManifest</DeployClass>
             <Operation>1</Operation>
@@ -376,7 +376,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android\Debug\FixAndroidLogger.classes" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\classes\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\classes\</RemoteDir>
             <RemoteName>FixAndroidLogger.classes</RemoteName>
             <DeployClass>AndroidClasses</DeployClass>
             <Operation>64</Operation>
@@ -385,7 +385,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android\Debug\styles.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\values\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\values\</RemoteDir>
             <RemoteName>styles.xml</RemoteName>
             <DeployClass>AndroidSplashStyles</DeployClass>
             <Operation>1</Operation>
@@ -394,7 +394,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_48x48.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-xhdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-xhdpi\</RemoteDir>
             <RemoteName>ic_notification.png</RemoteName>
             <DeployClass>Android_NotificationIcon48</DeployClass>
             <Operation>1</Operation>
@@ -403,7 +403,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="Android\Debug\styles-v21.xml" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\values-v21\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\values-v21\</RemoteDir>
             <RemoteName>styles.xml</RemoteName>
             <DeployClass>AndroidSplashStylesV21</DeployClass>
             <Operation>1</Operation>
@@ -412,7 +412,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\debug\armeabi\libnative-activity.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\library\lib\armeabi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\library\lib\armeabi\</RemoteDir>
             <RemoteName>libFixAndroidLogger.so</RemoteName>
             <DeployClass>AndroidLibnativeArmeabiFile</DeployClass>
             <Operation>1</Operation>
@@ -421,7 +421,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_24x24.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-mdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-mdpi\</RemoteDir>
             <RemoteName>ic_notification.png</RemoteName>
             <DeployClass>Android_NotificationIcon24</DeployClass>
             <Operation>1</Operation>
@@ -430,7 +430,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_SplashImage_426x320.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-small\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-small\</RemoteDir>
             <RemoteName>splash_image.png</RemoteName>
             <DeployClass>Android_SplashImage426</DeployClass>
             <Operation>1</Operation>
@@ -439,7 +439,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_LauncherIcon_36x36.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-ldpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-ldpi\</RemoteDir>
             <RemoteName>ic_launcher.png</RemoteName>
             <DeployClass>Android_LauncherIcon36</DeployClass>
             <Operation>1</Operation>
@@ -448,7 +448,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\lib\android\debug\mips\libnative-activity.so" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\library\lib\mips\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\library\lib\mips\</RemoteDir>
             <RemoteName>libFixAndroidLogger.so</RemoteName>
             <DeployClass>AndroidLibnativeMipsFile</DeployClass>
             <Operation>1</Operation>
@@ -457,7 +457,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_36x36.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-hdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-hdpi\</RemoteDir>
             <RemoteName>ic_notification.png</RemoteName>
             <DeployClass>Android_NotificationIcon36</DeployClass>
             <Operation>1</Operation>
@@ -466,7 +466,7 @@
             <Overwrite>True</Overwrite>
         </DeployFile>
         <DeployFile Include="$(BDS)\bin\Artwork\Android\FM_NotificationIcon_96x96.png" Condition="'$(Config)'=='Debug'">
-            <RemoteDir>FixAndroidLogger\res\drawable-xxxhdpi\</RemoteDir>
+            <RemoteDir>AndroidLoggerApp\res\drawable-xxxhdpi\</RemoteDir>
             <RemoteName>ic_notification.png</RemoteName>
             <DeployClass>Android_NotificationIcon96</DeployClass>
             <Operation>1</Operation>

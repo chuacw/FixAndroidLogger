@@ -26,7 +26,7 @@
         <activity android:name="com.embarcadero.firemonkey.FMXNativeActivity"
                 android:label="%activityLabel%"
                 android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
-                android:launchMode="singleTask">
+                android:launchMode="singleTask" android:exported="true">
             <!-- Tell NativeActivity the name of our .so -->
             <meta-data android:name="android.app.lib_name"
                 android:value="%libNameValue%" />

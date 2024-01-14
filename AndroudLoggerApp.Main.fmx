@@ -64,13 +64,12 @@ object frmLogDemo: TfrmLogDemo
       Size.PlatformDefault = False
       TabOrder = 1
       Text = 'Change Tag'
-      OnClick = btnChangeTagClick
     end
     object edTagName: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
       Align = Top
       TabOrder = 2
-      Text = 'MyDelphiApp'
+      Text = 'chuacw'
       Position.Y = 23.000000000000000000
       Size.Width = 640.000000000000000000
       Size.Height = 32.000000000000000000
@@ -130,7 +129,6 @@ object frmLogDemo: TfrmLogDemo
           Size.PlatformDefault = False
           TabOrder = 0
           Text = 'Send To Log'
-          OnClick = btnSendToPriorityLogClick
         end
         object rbDebug: TRadioButton
           GroupName = 'Priority'
